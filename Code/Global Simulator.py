@@ -412,17 +412,17 @@ def simu():
     
 
 def run_simu(lambd_, bits_per_RU_UL, bits_per_RU_DL, repetitions, nb_client, payload_size_bits_, nb_attempts, indice_backoff, nprach_period_ms_, RAOs,G, UP_opt, percent_stop_failure_):
-    global lambd
-    global link_budget_UL
-    global link_budget_DL
+    global lambd    # lambda_a
+    global link_budget_UL   # TB_RU
+    global link_budget_DL   # TB_SF
     global nb_simu_clients
-    global payload_size_bits
+    global payload_size_bits    # B
     global percent_stop_failure
-    global max_attempts
+    global max_attempts # N
     global indice_bo
-    global nprach_period_ms
-    global nprach_sc
-    global npdcch_period
+    global nprach_period_ms #  delta_RAO
+    global nprach_sc    # m_RAO
+    global npdcch_period    # G
     global rsc_NPDCCH
     global rsc_NPDSCH
     global rsc_NPUSCH
