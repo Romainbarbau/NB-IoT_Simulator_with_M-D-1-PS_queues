@@ -19,7 +19,6 @@ debug_ = False
 single_tone = True
 #NPRACH
 rep_ra = None #[1,2,4,8,16,32,64,128] defined in run_simu
-nprach_sc = 12 #RAO
 backoff_ms = [0, 256, 512, 1024, 2048, 4096,8192,16384,32768,65536,131072,262144,524288, 524288, 524288, 524288]
 #NPDCCH
 nb_CCE_subframe = 2
