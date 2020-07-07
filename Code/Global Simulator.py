@@ -335,7 +335,7 @@ def simu():
                 c_ds = communication(com.id_,D_npdsch)
                 addEvt(evenements, evt(typeEvt.ARRIVAL, simu_time + tempsRA, c_ds, 1))
                 addEvt(evenements, evt(typeEvt.IMPATIENCE, simu_time + tempsRA + T_npdsch, c_ds, 1))
-                #NPDSCH
+                #NPUSCH
                 c_us = communication(com.id_,D_npusch)
                 addEvt(evenements, evt(typeEvt.ARRIVAL, simu_time + tempsRA, c_us, 2))
                 addEvt(evenements, evt(typeEvt.IMPATIENCE, simu_time + tempsRA + T_npusch, c_us, 2))
