@@ -102,14 +102,9 @@ def ComputationNvxTaux(communications,simu_time, next_evt):
         len_fil = len(fil)
         tx = 0
         if(len_fil>0):
-            filet = 0
             for c in fil:
-                tx = c.D_service_time/len_fil
+                tx = c.D_service_time/len_fil # # per second, the ratio of the communication that is successfully allocated
                 percentage_addition = ((next_evt.date_ - simu_time) * tx)
-                if(filet == 2):
-                    #print("Computation pourcentage " + str(c.D_service_time) + "    "+ str(next_evt.date_))
-                    #print("ajout pourcentage : " + str(round(percentage_addition,2)))
-                    pass
                 #Test if the oldest communication will be finished before the next event.
                 if(c.rate_ + percentage_addition >= 1):#if percentage addition = 0 it means that we are at the same time and therefore that we already had a rate at 1, with a DEPARTURE already recorded
                     DEPARTURE_time = simu_time + (1-c.rate_)/tx
@@ -117,7 +112,6 @@ def ComputationNvxTaux(communications,simu_time, next_evt):
                         queue_DEPARTURE = i
                         com_DEPARTURE = c
                         time_DEPARTURE = DEPARTURE_time
-                filet += 1
         i += 1
 
     #WHETHER OR NOT TO SCHEDULE THE NEXT DEPARTURE
